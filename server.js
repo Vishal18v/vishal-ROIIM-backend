@@ -36,7 +36,7 @@ async function createPaysafeId(email) {
             method: 'post',
             url: 'https://api.test.paysafe.com/paymenthub/v1/customers',
             data: {
-                merchantCustomerId: email,
+                merchantCustomerId: email+uuidv4(),
                 locale: "en_US",
                 firstName: "Google",
                 middleName: "Microsoft",
